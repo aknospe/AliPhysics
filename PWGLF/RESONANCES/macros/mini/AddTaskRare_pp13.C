@@ -336,7 +336,9 @@ Bool_t Config_pipi(
     // monitoring
     if(enableMonitor){
         Printf("======== Monitoring cut AliRsnCutSetDaughterParticle enabled");
+#ifdef __CINT__
         gROOT->LoadMacro("$ALICE_PHYSICS/PWGLF/RESONANCES/macros/mini/AddMonitorOutput.C");
+#endif
         AddMonitorOutput(isMC,cutSetQ->GetMonitorOutput());
         AddMonitorOutput(isMC,cutSetPi->GetMonitorOutput());
     }
@@ -483,7 +485,9 @@ Bool_t Config_pikx(
     // monitoring
     if(enableMonitor){
         Printf("======== Monitoring cut AliRsnCutSetDaughterParticle enabled");
+#ifdef __CINT__
         gROOT->LoadMacro("$ALICE_PHYSICS/PWGLF/RESONANCES/macros/mini/AddMonitorOutput.C");
+#endif
         AddMonitorOutput(isMC,cutSetQ->GetMonitorOutput());
         AddMonitorOutput(isMC,cutSetPi->GetMonitorOutput());
         AddMonitorOutput(isMC,cutSetK->GetMonitorOutput());
@@ -661,11 +665,12 @@ Bool_t Config_pik0(
     // monitoring
     if(enableMonitor){
         Printf("======== Monitoring cut AliRsnCutSetDaughterParticle enabled");
+#ifdef __CINT__
         gROOT->LoadMacro("$ALICE_PHYSICS/PWGLF/RESONANCES/macros/mini/AddMonitorOutput.C");
+        gROOT->LoadMacro("$ALICE_PHYSICS/PWGLF/RESONANCES/macros/mini/qa/AddMonitorOutputV0.C");
+#endif
         AddMonitorOutput(isMC,cutSetQ->GetMonitorOutput());
         AddMonitorOutput(isMC,cutSetPi->GetMonitorOutput());
-        
-        gROOT->LoadMacro("$ALICE_PHYSICS/PWGLF/RESONANCES/macros/mini/qa/AddMonitorOutputV0.C");
         AddMonitorOutputV0(isMC,cutSetK0s->GetMonitorOutput(), "K0S");
     }
     
@@ -812,7 +817,9 @@ Bool_t Config_kxkx(
     // monitoring
     if(enableMonitor){
         Printf("======== Monitoring cut AliRsnCutSetDaughterParticle enabled");
+#ifdef __CINT__
         gROOT->LoadMacro("$ALICE_PHYSICS/PWGLF/RESONANCES/macros/mini/AddMonitorOutput.C");
+#endif
         AddMonitorOutput(isMC,cutSetQ->GetMonitorOutput());
         AddMonitorOutput(isMC,cutSetK->GetMonitorOutput());
     }
@@ -992,11 +999,12 @@ Bool_t Config_kxk0(
     // monitoring
     if(enableMonitor){
         Printf("======== Monitoring cut AliRsnCutSetDaughterParticle enabled");
+#ifdef __CINT__
         gROOT->LoadMacro("$ALICE_PHYSICS/PWGLF/RESONANCES/macros/mini/AddMonitorOutput.C");
+        gROOT->LoadMacro("$ALICE_PHYSICS/PWGLF/RESONANCES/macros/mini/qa/AddMonitorOutputV0.C");
+#endif
         AddMonitorOutput(isMC,cutSetQ->GetMonitorOutput());
         AddMonitorOutput(isMC,cutSetKx->GetMonitorOutput());
-        
-        gROOT->LoadMacro("$ALICE_PHYSICS/PWGLF/RESONANCES/macros/mini/qa/AddMonitorOutputV0.C");
         AddMonitorOutputV0(isMC,cutSetK0s->GetMonitorOutput(), "K0S");
     }
     
@@ -1160,7 +1168,9 @@ Bool_t Config_pkx(
     // monitoring
     if(enableMonitor){
         Printf("======== Monitoring cut AliRsnCutSetDaughterParticle enabled");
+#ifdef __CINT__
         gROOT->LoadMacro("$ALICE_PHYSICS/PWGLF/RESONANCES/macros/mini/AddMonitorOutput.C");
+#endif
         AddMonitorOutput(isMC,cutSetQ->GetMonitorOutput());
         AddMonitorOutput(isMC,cutSetP->GetMonitorOutput());
         AddMonitorOutput(isMC,cutSetK->GetMonitorOutput());
@@ -1340,11 +1350,12 @@ Bool_t Config_pk0(
     // monitoring
     if(enableMonitor){
         Printf("======== Monitoring cut AliRsnCutSetDaughterParticle enabled");
+#ifdef __CINT__
         gROOT->LoadMacro("$ALICE_PHYSICS/PWGLF/RESONANCES/macros/mini/AddMonitorOutput.C");
+        gROOT->LoadMacro("$ALICE_PHYSICS/PWGLF/RESONANCES/macros/mini/qa/AddMonitorOutputV0.C");
+#endif
         AddMonitorOutput(isMC,cutSetQ->GetMonitorOutput());
         AddMonitorOutput(isMC,cutSetP->GetMonitorOutput());
-        
-        gROOT->LoadMacro("$ALICE_PHYSICS/PWGLF/RESONANCES/macros/mini/qa/AddMonitorOutputV0.C");
         AddMonitorOutputV0(isMC,cutSetK0s->GetMonitorOutput(), "K0S");
     }
     
@@ -1575,11 +1586,12 @@ Bool_t Config_Lambdapi(
     // monitoring
     if(enableMonitor){
         Printf("======== Monitoring cut AliRsnCutSetDaughterParticle enabled");
+#ifdef __CINT__
         gROOT->LoadMacro("$ALICE_PHYSICS/PWGLF/RESONANCES/macros/mini/AddMonitorOutput.C");
+        gROOT->LoadMacro("$ALICE_PHYSICS/PWGLF/RESONANCES/macros/mini/qa/AddMonitorOutputV0.C");
+#endif
         AddMonitorOutput(isMC,cutSetQ->GetMonitorOutput());
         AddMonitorOutput(isMC,cutSetPi->GetMonitorOutput());
-        
-        gROOT->LoadMacro("$ALICE_PHYSICS/PWGLF/RESONANCES/macros/mini/qa/AddMonitorOutputV0.C");
         AddMonitorOutputV0(isMC,cutSetLambda->GetMonitorOutput(), "lambda");
         AddMonitorOutputV0(isMC,cutSetAntiLambda->GetMonitorOutput(), "antilambda");
     }
@@ -1823,11 +1835,12 @@ Bool_t Config_Lambdakx(
     // monitoring
     if(enableMonitor){
         Printf("======== Monitoring cut AliRsnCutSetDaughterParticle enabled");
+#ifdef __CINT__
         gROOT->LoadMacro("$ALICE_PHYSICS/PWGLF/RESONANCES/macros/mini/AddMonitorOutput.C");
+        gROOT->LoadMacro("$ALICE_PHYSICS/PWGLF/RESONANCES/macros/mini/qa/AddMonitorOutputV0.C");
+#endif
         AddMonitorOutput(isMC,cutSetQ->GetMonitorOutput());
         AddMonitorOutput(isMC,cutSetK->GetMonitorOutput());
-        
-        gROOT->LoadMacro("$ALICE_PHYSICS/PWGLF/RESONANCES/macros/mini/qa/AddMonitorOutputV0.C");
         AddMonitorOutputV0(isMC,cutSetLambda->GetMonitorOutput(), "lambda");
         AddMonitorOutputV0(isMC,cutSetAntiLambda->GetMonitorOutput(), "antilambda");
     }
@@ -2185,7 +2198,9 @@ Bool_t Config_Lambdak0(
     
     // monitoring
     if(enableMonitor){
+#ifdef __CINT__
         gROOT->LoadMacro("$ALICE_PHYSICS/PWGLF/RESONANCES/macros/mini/qa/AddMonitorOutputV0.C");
+#endif
         AddMonitorOutputV0(isMC,cutSetK0s->GetMonitorOutput(), "K0S");
         AddMonitorOutputV0(isMC,cutSetLambda->GetMonitorOutput(), "lambda");
         AddMonitorOutputV0(isMC,cutSetAntiLambda->GetMonitorOutput(), "antilambda");
@@ -2495,11 +2510,12 @@ Bool_t Config_Lambdap(
     // monitoring
     if(enableMonitor){
         Printf("======== Monitoring cut AliRsnCutSetDaughterParticle enabled");
+#ifdef __CINT__
         gROOT->LoadMacro("$ALICE_PHYSICS/PWGLF/RESONANCES/macros/mini/AddMonitorOutput.C");
+        gROOT->LoadMacro("$ALICE_PHYSICS/PWGLF/RESONANCES/macros/mini/qa/AddMonitorOutputV0.C");
+#endif
         AddMonitorOutput(isMC,cutSetQ->GetMonitorOutput());
         AddMonitorOutput(isMC,cutSetP->GetMonitorOutput());
-        
-        gROOT->LoadMacro("$ALICE_PHYSICS/PWGLF/RESONANCES/macros/mini/qa/AddMonitorOutputV0.C");
         AddMonitorOutputV0(isMC,cutSetLambda->GetMonitorOutput(), "lambda");
         AddMonitorOutputV0(isMC,cutSetAntiLambda->GetMonitorOutput(), "antilambda");
     }
@@ -2813,10 +2829,11 @@ Bool_t Config_LambdaLambda(
     // monitoring
     if(enableMonitor){
         Printf("======== Monitoring cut AliRsnCutSetDaughterParticle enabled");
+#ifdef __CINT__
         gROOT->LoadMacro("$ALICE_PHYSICS/PWGLF/RESONANCES/macros/mini/AddMonitorOutput.C");
-        AddMonitorOutput(isMC,cutSetQ->GetMonitorOutput());
-        
         gROOT->LoadMacro("$ALICE_PHYSICS/PWGLF/RESONANCES/macros/mini/qa/AddMonitorOutputV0.C");
+#endif
+        AddMonitorOutput(isMC,cutSetQ->GetMonitorOutput());
         AddMonitorOutputV0(isMC,cutSetLambda->GetMonitorOutput(), "lambda");
         AddMonitorOutputV0(isMC,cutSetAntiLambda->GetMonitorOutput(), "antilambda");
     }
@@ -3122,10 +3139,11 @@ Bool_t Config_XiPi(
     // monitoring
     if(enableMonitor){
         Printf("======== Monitoring cut AliRsnCutSetDaughterParticle enabled");
+#ifdef __CINT__
         gROOT->LoadMacro("$ALICE_PHYSICS/PWGLF/RESONANCES/macros/mini/AddMonitorOutput.C");
         gROOT->LoadMacro("$ALICE_PHYSICS/PWGLF/RESONANCES/macros/mini/qa/AddMonitorOutputV0.C");
         gROOT->LoadMacro("$ALICE_PHYSICS/PWGLF/RESONANCES/macros/mini/qa/AddMonitorOutputCascade.C");
-        
+#endif
         AddMonitorOutput(isMC,cutSetPi->GetMonitorOutput());
         AddMonitorOutputV0(isMC, cutSetXi->GetMonitorOutput(), "Lambda", "nokine");
         AddMonitorOutputV0(isMC, cutSetXibar->GetMonitorOutput(), "AntiLambda", "nokine");
@@ -3439,10 +3457,11 @@ Bool_t Config_Xikx(
     // monitoring
     if(enableMonitor){
         Printf("======== Monitoring cut AliRsnCutSetDaughterParticle enabled");
+#ifdef __CINT__
         gROOT->LoadMacro("$ALICE_PHYSICS/PWGLF/RESONANCES/macros/mini/AddMonitorOutput.C");
         gROOT->LoadMacro("$ALICE_PHYSICS/PWGLF/RESONANCES/macros/mini/qa/AddMonitorOutputV0.C");
         gROOT->LoadMacro("$ALICE_PHYSICS/PWGLF/RESONANCES/macros/mini/qa/AddMonitorOutputCascade.C");
-        
+#endif
         AddMonitorOutput(isMC,cutSetK->GetMonitorOutput());
         AddMonitorOutputV0(isMC, cutSetXi->GetMonitorOutput(), "Lambda", "nokine");
         AddMonitorOutputV0(isMC, cutSetXibar->GetMonitorOutput(), "AntiLambda", "nokine");
@@ -3791,10 +3810,11 @@ Bool_t Config_Xik0(
     // monitoring
     if(enableMonitor){
         Printf("======== Monitoring cut AliRsnCutSetDaughterParticle enabled");
+#ifdef __CINT__
         gROOT->LoadMacro("$ALICE_PHYSICS/PWGLF/RESONANCES/macros/mini/AddMonitorOutput.C");
         gROOT->LoadMacro("$ALICE_PHYSICS/PWGLF/RESONANCES/macros/mini/qa/AddMonitorOutputV0.C");
         gROOT->LoadMacro("$ALICE_PHYSICS/PWGLF/RESONANCES/macros/mini/qa/AddMonitorOutputCascade.C");
-        
+#endif
         AddMonitorOutputV0(isMC, cutSetK0s->GetMonitorOutput(), "K0S");
         AddMonitorOutputV0(isMC, cutSetXi->GetMonitorOutput(), "Lambda", "nokine");
         AddMonitorOutputV0(isMC, cutSetXibar->GetMonitorOutput(), "AntiLambda", "nokine");
@@ -4103,10 +4123,11 @@ Bool_t Config_XiP(
     // monitoring
     if(enableMonitor){
         Printf("======== Monitoring cut AliRsnCutSetDaughterParticle enabled");
+#ifdef __CINT__
         gROOT->LoadMacro("$ALICE_PHYSICS/PWGLF/RESONANCES/macros/mini/AddMonitorOutput.C");
         gROOT->LoadMacro("$ALICE_PHYSICS/PWGLF/RESONANCES/macros/mini/qa/AddMonitorOutputV0.C");
         gROOT->LoadMacro("$ALICE_PHYSICS/PWGLF/RESONANCES/macros/mini/qa/AddMonitorOutputCascade.C");
-        
+#endif
         AddMonitorOutput(isMC,cutSetP->GetMonitorOutput());
         AddMonitorOutputV0(isMC, cutSetXi->GetMonitorOutput(), "Lambda", "nokine");
         AddMonitorOutputV0(isMC, cutSetXibar->GetMonitorOutput(), "AntiLambda", "nokine");
@@ -4472,10 +4493,11 @@ Bool_t Config_XiLambda(
     // monitoring
     if(enableMonitor){
         Printf("======== Monitoring cut AliRsnCutSetDaughterParticle enabled");
+#ifdef __CINT__
         gROOT->LoadMacro("$ALICE_PHYSICS/PWGLF/RESONANCES/macros/mini/AddMonitorOutput.C");
         gROOT->LoadMacro("$ALICE_PHYSICS/PWGLF/RESONANCES/macros/mini/qa/AddMonitorOutputV0.C");
         gROOT->LoadMacro("$ALICE_PHYSICS/PWGLF/RESONANCES/macros/mini/qa/AddMonitorOutputCascade.C");
-        
+#endif
         AddMonitorOutputV0(isMC,cutSetLambda->GetMonitorOutput(), "lambda");
         AddMonitorOutputV0(isMC,cutSetAntiLambda->GetMonitorOutput(), "antilambda");
         
